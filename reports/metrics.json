@@ -1,0 +1,96 @@
+{
+  "raw_rows": 731,
+  "usable_rows": 703,
+  "split": {
+    "train": 583,
+    "test": 120,
+    "test_start": "2012-09-03"
+  },
+  "selected": "scaled_ridge",
+  "cross_validation": {
+    "scaled_ridge": {
+      "fold_mae": [
+        699.3724706041377,
+        950.4015646587657,
+        755.143357329791,
+        616.849819036403
+      ],
+      "mean_mae": 755.4418029072743
+    },
+    "hist_gradient_boosting": {
+      "fold_mae": [
+        839.9213432086825,
+        2047.3092244257734,
+        1161.293359614003,
+        711.1353426885977
+      ],
+      "mean_mae": 1189.9148174842642
+    },
+    "seasonal_naive": {
+      "fold_mae": [
+        851.0,
+        1404.15,
+        1011.9166666666666,
+        734.1166666666667
+      ],
+      "mean_mae": 1000.2958333333333
+    }
+  },
+  "backtest_windows": [
+    {
+      "train_end": "2012-01-06",
+      "validation_start": "2012-01-07",
+      "validation_end": "2012-03-06"
+    },
+    {
+      "train_end": "2012-03-06",
+      "validation_start": "2012-03-07",
+      "validation_end": "2012-05-05"
+    },
+    {
+      "train_end": "2012-05-05",
+      "validation_start": "2012-05-06",
+      "validation_end": "2012-07-04"
+    },
+    {
+      "train_end": "2012-07-04",
+      "validation_start": "2012-07-05",
+      "validation_end": "2012-09-02"
+    }
+  ],
+  "test": {
+    "seasonal_naive": {
+      "mae": 1342.2666666666667,
+      "rmse": 1911.182718458215,
+      "r2": 0.06396982270756246
+    },
+    "scaled_ridge": {
+      "mae": 931.6062033091185,
+      "rmse": 1298.9893968728386,
+      "r2": 0.567589089694639
+    },
+    "hist_gradient_boosting": {
+      "mae": 1382.293325466068,
+      "rmse": 1878.0497632348158,
+      "r2": 0.09614321512471402
+    }
+  },
+  "provenance": {
+    "seed": 42,
+    "python": "3.11.14",
+    "platform": "Darwin",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.10.8",
+      "joblib": "1.6.0",
+      "torch": "2.11.0",
+      "fastapi": "0.162.0"
+    },
+    "source": {
+      "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+      "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401"
+    }
+  }
+}
